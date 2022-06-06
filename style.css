@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --light-gray: hsl(0, 0%, 95%)
+}
+
+body {
+  height: 95vh;
+  font-size: 15px;
+  font-family: 'Lexend Deca', sans-serif;
+  overflow: auto;
+  background-color: var(--light-gray);
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  color: var(--light-gray);
+  text-transform: uppercase;
+  font-size: 2.5em;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+P {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.card .col:nth-child(1) {
+  background-color: #e28525;
+}
+.col:nth-child(1) button {
+  color: #e28525;
+}
+.card .col:nth-child(2){
+  background-color: #016972
+}
+.col:nth-child(2) button {
+  color: #016972;
+}
+.card .col:nth-child(3){
+  background-color: #00403f
+}
+.col:nth-child(3) button {
+  color: #00403f;
+}
+
+.col {
+  padding: 40px;
+}
+
+button {
+  background-color: var(--light-gray);
+  width: 130px;
+  height: 40px;
+  border-radius: 30px;
+  border: 0;
+  font-size: 1em;
+}
+
+ button.btn:hover {
+  border: 2px solid var(--light-gray);
+  background-color: inherit;
+  color: var(--light-gray);
+  cursor: pointer;
+}
+
+@media screen and (width > 768px) {
+  .card {
+    position: relative;
+    flex-direction: row;
+    max-width: 1000px;
+    min-height: 500px;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 50px;
+  }
+  .container {
+    min-height: 90vh;
+  }
+}
